@@ -13,13 +13,9 @@ class App extends Component {
   }
 
   componentDidMount() {
-    console.log('CDM now running');
-    // http://localhost:5000 is the address to the server doorstep
-    // /items is the "endpoint"
     axios
       .get('http://localhost:5000/friends')
       .then(res => {
-        console.log(res);
         this.setState({ friends: res.data });
       })
       .catch(err => {

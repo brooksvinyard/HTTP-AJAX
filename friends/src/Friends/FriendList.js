@@ -1,6 +1,5 @@
 import React from 'react';
 import Friend from './Friend'
-// import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 function friendList(props) {
     return (
