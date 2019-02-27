@@ -1,0 +1,37 @@
+.friend-list {
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+
+.friend {
+    background-color: #fdfdfd;
+    border: 1px solid darkgrey;
+    box-shadow: 0px 2px 20px 2px darkgrey;
+    border-radius: 5px;
+    width: 300px;
+    height: 300px;
+    margin: 5%;
+    padding: 3%;
+}
+
+.friend-name {
+    font-size: 40px;
+    font-weight: 900;
+    text-align: center;
+    margin: 8%;
+    font-family: monospace;
+    color: #4e4949;
+}
+
+.friend-age {
+    font-size: 20px;
+    margin: 5% 0;
+}
+
+.friend-email {
+    font-size: 20px;
+    text-decoration: underline;
+    margin: 5% 0;
+}
