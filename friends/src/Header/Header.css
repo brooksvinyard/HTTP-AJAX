@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+
+    background-color: #4e4949;
+    color: #fdfdfd;
+    box-shadow: 0px 1px 5px 1px grey;
+    border-bottom: 1px solid darkgrey;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2%;
+}
+
+.left {
+
+}
+
+.right:hover {
+    text-decoration: underline;
+}
