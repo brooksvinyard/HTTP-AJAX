@@ -47,3 +47,49 @@
 .friend-email:hover {
     color: #8d89bf;
 }
+
+.friend-form {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.friend-form h2 {
+    font-size: 44px;
+    font-weight: 900;
+    text-align: center;
+    margin: 8%;
+    font-family: monospace;
+}
+
+.friend-form form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.friend-form input {
+    font-size: 20px;
+    margin: 0 10% 50px 10%;
+    border-radius: 5px;
+    width: 25%;
+    box-shadow: inset 0 0 0px 0px darkgrey;
+}
+
+
+.friend-form button {
+    font-size: 30px;
+    width: 20%;
+    border-radius: 5px;
+    box-shadow: 1px 1px 0px 0px darkgrey;
+    background-color: #fdfdfd;
+    color: #4e4949;
+}
+
+.friend-form button:hover {
+    background-color: #4e4949;
+    color: #fdfdfd;
+    box-shadow: 0px 1px 5px 1px grey;
+}

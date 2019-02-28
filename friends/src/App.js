@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
-import FriendList from './Friends/FriendList';
+import FriendForm from './Friends/FriendForm';
 import Header from './Header/Header'
+import Home from './Home'
+// import Route from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 class App extends Component {
   constructor() {
@@ -24,13 +27,16 @@ class App extends Component {
         this.setState({ error: err });
       });
   }
+
+
   render() {
     return (
       <div className="App">
-        <Header />
-        <FriendList friends={this.state.friends} />
+        {<Header />}
+        {<Route exact path="/" render={props => <Home {...props} friends={this.state.friends} /> } />}
+        {<Route path="/friend-form" render={props => <FriendForm {...props} /> } />}
       </div>
-    );
+    )
   }
 }
 

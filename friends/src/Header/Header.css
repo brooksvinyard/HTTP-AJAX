@@ -13,10 +13,21 @@
     padding: 0 2%;
 }
 
-.left {
-
+.left a{
+    cursor: pointer;
+    color: #fdfdfd;
+    text-decoration: none;
+}
+.left a:hover {
+    text-decoration: underline;
 }
 
-.right:hover {
+.right a{
+    cursor: pointer;
+    color: #fdfdfd;
+    text-decoration: none;
+}
+
+.right a:hover {
     text-decoration: underline;
 }
