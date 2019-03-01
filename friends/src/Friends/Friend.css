@@ -18,19 +18,47 @@
     color: #4e4949;
 }
 
+.friend-card {
+    background-color: #fdfdfd;
+    border: 1px solid darkgrey;
+    box-shadow: 0px 2px 20px 2px darkgrey;
+    border-radius: 5px;
+    width: 300px;
+    height: 400px;
+    margin: 5%;
+    padding: 20px;
+    color: #4e4949;
+}
+
 .friend:hover {
     background-color: #4e4949;
     color: #fdfdfd;
     box-shadow: 0px 1px 5px 1px grey;
 }
 
+.friend:hover a{
+    color: #fdfdfd;
+}
 .friend-name {
     font-size: 44px;
     font-weight: 900;
     text-align: center;
     margin: 8%;
     font-family: monospace;
-    
+}
+
+.friend-name a{
+    font-size: 44px;
+    font-weight: 900;
+    text-align: center;
+    margin: 8%;
+    font-family: monospace;
+    color: #4e4949;
+    text-decoration: none;
+}
+.friend-name a:hover {
+    text-decoration: underline;
+    color: #8d89bf;
 }
 
 .friend-age {
@@ -46,6 +74,23 @@
 
 .friend-email:hover {
     color: #8d89bf;
+}
+
+.friend button, .friend-card button {
+    font-size: 30px;
+    width: 80%;
+    border-radius: 5px;
+    box-shadow: 1px 1px 0px 0px darkgrey;
+    background-color: #fdfdfd;
+    color: #4e4949;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.friend button:hover, .friend-card button:hover {
+    background-color: #4e4949;
+    color: #fdfdfd;
+    box-shadow: 0px 1px 5px 1px grey;
 }
 
 .friend-form {

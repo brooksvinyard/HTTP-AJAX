@@ -4,7 +4,7 @@ import FriendList from './Friends/FriendList';
 
 function home(props) {
     return (
-        <FriendList friends={props.friends} />
+        <FriendList friends={props.friends} setUpdateForm={props.setUpdateForm} />
     )
 };
 

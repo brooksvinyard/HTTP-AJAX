@@ -3,15 +3,31 @@ import React from 'react';
 
 class FriendForm extends React.Component {
     state = {
-        friend: {
+        friend: this.props.activeFriend || {
             name: '',
             age: '',
             email: ''
         }
     };
 
+    componentDidUpdate(prevProps) {
+        if (
+            this.props.activeFriend &&
+            prevProps.activeFriend !== this.props.activeFriend
+          ) {
+            this.setState({
+              item: this.props.activeFriend
+            });
+          }
+    }
+
     changeHandler = e => {
         e.persist();
+
+        if (e.target.name === 'age') {
+          e.target.value = parseInt(e.target.value, 10);
+        }
+        
         this.setState(prevState => ({
             friend: {
                 ...prevState.friend,
@@ -21,7 +37,11 @@ class FriendForm extends React.Component {
     };
 
     handleSubmit = e => {
-        this.props.addFriend(e, this.state.friend)
+        if (this.props.activeFriend) {
+            this.props.updateFriend(e, this.state.friend);
+          } else {
+            this.props.addFriend(e, this.state.friend)
+          }
         this.setState({
             friend: {
                 name: '',
