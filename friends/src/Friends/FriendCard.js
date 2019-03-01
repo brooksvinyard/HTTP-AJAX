@@ -9,6 +9,7 @@ function friendCard({friends, match, deleteFriend, setUpdateForm}) {
         return <h3>Loading friend...</h3>;
       }
     return (
+        <div className="friend-list">
         <div className="friend-card">
             <div className="friend-name">
                 {friend.name}
@@ -21,6 +22,7 @@ function friendCard({friends, match, deleteFriend, setUpdateForm}) {
             </div>
             <button onClick={e => setUpdateForm(e, friend)}>Update</button>
             <button onClick={e => deleteFriend(e, friend.id)}>Delete</button>
+        </div>
         </div>
     )
 };

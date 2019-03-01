@@ -13,7 +13,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      activeFriend: [],
+      activeFriend: null,
       friends: [],
       error: ''
     };
@@ -40,9 +40,7 @@ class App extends Component {
         this.setState({
           friends: res.data
         });
-
-        //Change page here
-        //
+        this.props.history.push('/friend-list');
       })
       .catch(err => {
         console.log(err);
@@ -50,7 +48,6 @@ class App extends Component {
   };
 
   deleteFriend = (e, id) => {
-    debugger;
     e.preventDefault();
 
     axios
